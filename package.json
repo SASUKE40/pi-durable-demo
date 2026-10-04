@@ -1,0 +1,26 @@
+{
+  "name": "pi-durable-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A crash-and-resume demo using the real pi-durable harness and SQLite storage.",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "demo": "node --import tsx src/demo.ts",
+    "start": "node --import tsx src/worker.ts",
+    "check": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts"
+  },
+  "dependencies": {
+    "@earendil-works/chord": "1.0.2",
+    "@earendil-works/pi-ai": "1.0.2",
+    "@earendil-works/pi-durable": "1.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.4",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}
